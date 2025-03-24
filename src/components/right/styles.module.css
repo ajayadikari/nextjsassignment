@@ -1,0 +1,40 @@
+.right {
+    position: relative;
+    width: 50%; /* Set the width of the .right container */
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    overflow: hidden;
+}
+
+.imageWrapper {
+    width: 97%; /* 98% of the parent width */
+    height: 97%; /* 98% of the parent height */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px; /* Optional: Adds rounded corners */
+    background: linear-gradient(to right, pink, yellow), linear-gradient(to bottom, blue, pink); /* Two gradient layers */
+    background-blend-mode: overlay; /* Blend the gradients together */
+    transition: all ease-in-out 0.2s;
+}
+
+.img_cont {
+    width: 98%; /* 98% of the parent width */
+    height: 98%; /* 98% of the parent height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* Optional: Adds rounded corners */
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out; /* Adds a smooth hover effect */
+}
+
+.imageWrapper:hover {
+    transform: scale(101%); /* Scales the image on hover */
+}

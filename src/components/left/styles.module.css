@@ -1,0 +1,107 @@
+
+
+.left {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align elements to the start */
+    gap: 10px; /* Adds 10px gap between each element */
+    color: white;
+}
+
+.left p:first-of-type {
+    font-weight: 900; /* Makes the first <p> tag bold */
+    font-size: 16px; /* Optional: Adjust the font size if needed */
+    margin: 20px; /* Reset margin */
+}
+
+.left h1 {
+    font-weight: 900; /* Makes the <h1> text bold */
+    font-size: 50px; /* Makes the <h1> text larger */
+    margin: 20px; /* Reset margin */
+}
+
+.left p:last-of-type {
+    font-size: 14px; /* Optional: Adjust the font size for the second <p> */
+    margin: 20px; /* Reset margin */
+}
+
+.left button {
+    padding: 15px; /* Adds padding inside the button */
+    font-size: 16px; /* Adjusts the font size for the button text */
+    border-radius: 10px; /* Adds rounded corners */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    margin-left: 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    position: relative; /* Ensures child elements can be positioned relative to the button */
+    padding: 15px; /* Adds padding inside the button */
+    font-size: 16px; /* Adjusts the font size for the button text */
+    border-radius: 10px; /* Adds rounded corners */
+    border: none; /* Removes the default border */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    text-align: center; /* Centers the text inside the button */
+    background: white; /* Default button background */
+    box-sizing: border-box; /* Ensures border is included in the element's dimensions */
+    position: relative
+}
+
+.btn span {
+    margin-right: 5px;
+}
+
+.right_arrow {
+    position: relative; /* Allows the arrow to move independently */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the arrow movement */
+}
+
+.btn:hover {
+    border: 5px solid; /* Adds a border on hover */
+    border-image: linear-gradient(to right, blue, red) 1; /* Gradient border from blue to red */
+    transition: all 0.3s ease-in-out; /* Smooth transition for the border */
+    box-sizing: border-box; /* Ensures the border does not increase the button size */
+}
+
+.btn:hover .right_arrow {
+    transform: translateX(5px); /* Moves the arrow 5px to the right on hover */
+}
+
+.left h1 span{
+    background: linear-gradient(90deg, #C71585 0%, #8A2BE2 50%, #6A0DAD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.left h1 .other{
+    background: linear-gradient(90deg, #8A2BE2 0%, #4169E1 50%, #ADFF2F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.moving_display {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #00ff00, #0000ff, #ffff00, #00ff00);
+    background-size: 200% 100%;
+    animation: moveGradient 5s infinite linear;
+    position: absolute;
+    opacity: 0.1;
+    top: 40%;
+    border-radius: 30%;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+  
